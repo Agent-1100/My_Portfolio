@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header, section, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: relative;
+    background: #333;
+    color: #fff;
+    text-align: left; /* Aligns the text to the left */
+    padding: 20px;
+}
+
+#profile-pic {
+    position: absolute;
+    right: 20px; /* 20px from the right edge of the header */
+    top: 20px; /* 20px from the top edge of the header */
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintains the aspect ratio */
+    /* border-radius: 50%; /* Makes the photo round */
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #06c;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;  /* This will align the navigation items side by side */
+    justify-content: left; /* This centers the navigation items horizontally */
+    align-items: center; /* This centers the navigation items vertically */
+}
+
+nav li {
+    margin: 0 10px; /* Adds horizontal spacing between navigation items */
+}
+
+nav a {
+    text-decoration: none; /* Optional: removes underline from links */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+a {
+    color: #06c;
+    transition: color 0.3s ease; /* Add smooth transition effect */
+}
+
+a:hover {
+    color: #f00; /* Change color on hover */
+}
