@@ -29,6 +29,13 @@ header {
     /* border-radius: 50%; /* Makes the photo round */
 }
 
+#Introduction {
+    height: auto;
+    width: 700px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+}
+
 header p {
     font-size: 1.2em;
 }
@@ -49,7 +56,7 @@ a {
 footer {
     background: #333;
     color: #fff;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -98,4 +105,42 @@ a {
 
 a:hover {
     color: #f00; /* Change color on hover */
+}
+
+#Introduction .intro-container {
+    display: flex;   /* Enables Flexbox */
+    align-items: center; /* Vertically centers the items in the container */
+    justify-content: space-between; /* Spreads the items to occupy the full horizontal space */
+    text-align: justify;
+}
+
+#Introduction .intro-container #Intro-text {
+    flex: none; /* Overrides the previous flex setting to manually set size */
+    width: 800px; /* Custom width */
+    height: auto; /* Custom height */
+    overflow: auto; /* Adds a scrollbar if the text exceeds the specified height */
+    padding-right: 400px; /* Keeps some space between the text and the image */
+}
+
+#Introduction .intro-container .intro-pic {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transform effect for zoom */
+}
+
+#Introduction .intro-container .intro-pic:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    #Introduction .intro-container {
+        flex-direction: column; /* Stacks the image and text vertically on small screens */
+    }
+
+    #Introduction .intro-container #Intro-text,
+    #Introduction .intro-container .intro-pic {
+        width: 100%; /* Full width for both text and image */
+        padding: 0; /* Removes padding */
+    }
 }
