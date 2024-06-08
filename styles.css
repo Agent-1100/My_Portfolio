@@ -1,147 +1,185 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    background: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
 }
 
-header, section, footer {
-    text-align: center;
-    padding: 20px;
-}
-
+/* Header Styles */
 header {
-    position: relative;
-    background: #333;
-    color: #fff;
-    text-align: left; /* Aligns the text to the left */
-    padding: 20px;
+    background: #fff; /* White background for the header */
+    padding: 20px; /* Padding around content in the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow under the header */
+    text-align: center; /* Center everything in the header */
 }
 
-#profile-pic {
-    position: absolute;
-    right: 20px; /* 20px from the right edge of the header */
-    top: 20px; /* 20px from the top edge of the header */
-    width: 100px; /* Adjust size as needed */
-    height: auto; /* Maintains the aspect ratio */
-    /* border-radius: 50%; /* Makes the photo round */
-}
-
-#Introduction {
-    height: auto;
-    width: 700px;
-    text-align: justify;
-    font-family: Arial, sans-serif;
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Large font size for the name */
+    color: #222; /* Slightly darker grey for emphasis */
 }
 
 header p {
-    font-size: 1.2em;
+    font-style: italic; /* Italicize the subtitle */
+    color: #555; /* Medium grey for the subtitle */
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #06c;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-form input, form textarea {
-    width: 90%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
+/* Navigation Styles */
+nav {
+    margin-top: 10px; /* Space between bio and nav links */
 }
 
 nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;  /* This will align the navigation items side by side */
-    justify-content: left; /* This centers the navigation items horizontally */
-    align-items: center; /* This centers the navigation items vertically */
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
-nav li {
-    margin: 0 10px; /* Adds horizontal spacing between navigation items */
+nav ul li {
+    display: inline; /* Display links in a row */
+    margin-right: 15px; /* Space between the links */
 }
 
-nav a {
-    text-decoration: none; /* Optional: removes underline from links */
-    color: inherit; /* Inherits the color from the parent element */
+nav ul li a {
+    text-decoration: none; /* No underlines on the links */
+    color: #333; /* Dark grey text for links */
+    font-weight: bold; /* Make the links bold */
 }
 
-a {
-    color: #06c;
-    transition: color 0.3s ease; /* Add smooth transition effect */
+nav ul li a:hover, nav ul li a.active {
+    color: #0174DF; /* Highlight color when hovered or active */
 }
 
-a:hover {
-    color: #f00; /* Change color on hover */
-}
-
-#Introduction .intro-container {
-    display: flex;   /* Enables Flexbox */
-    align-items: center; /* Vertically centers the items in the container */
-    justify-content: space-between; /* Spreads the items to occupy the full horizontal space */
-    text-align: justify;
-}
-
-#Introduction .intro-container #Intro-text {
-    flex: none; /* Overrides the previous flex setting to manually set size */
-    width: 800px; /* Custom width */
-    height: auto; /* Custom height */
-    overflow: auto; /* Adds a scrollbar if the text exceeds the specified height */
-    padding-right: 400px; /* Keeps some space between the text and the image */
-}
-
-#Introduction .intro-container .intro-pic {
-    flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 250px; /* Adjust width as needed */
-    height: auto; /* Maintains aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transform effect for zoom */
-}
-
-#Introduction .intro-container .intro-pic:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
-@media (max-width: 768px) {
-    #Introduction .intro-container {
-        flex-direction: column; /* Stacks the image and text vertically on small screens */
+/* Responsive Layout Styles */
+@media (min-width: 768px) {
+    header {
+        text-align: left; /* Align text to the left on larger screens */
     }
 
-    #Introduction .intro-container #Intro-text,
-    #Introduction .intro-container .intro-pic {
-        width: 100%; /* Full width for both text and image */
-        padding: 0; /* Removes padding */
+    nav ul {
+        text-align: center; /* Center the navigation on large screens */
+        padding: 0;
+    }
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #2c3e50; /* Dark blue background for a professional look */
+    color: #ffffff; /* White text color for contrast */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Adequate font size for readability */
+    border-top: 1px solid #34495e; /* Slight border for visual separation */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+footer a {
+    color: #48c9b0; /* A bright, inviting color for the link */
+    text-decoration: none; /* No underline to keep it clean */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+footer a:hover {
+    color: #1abc9c; /* Slightly lighter shade when hovered */
+}
+
+/* Introduction Section Styles */
+#Introduction {
+    background: #fff; /* White background for better readability */
+    padding: 20px; /* Padding for spacing */
+    margin: 20px auto; /* Centering the section with some margin from the top and bottom */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for a lifted card effect */
+}
+
+#Introduction h2 {
+    color: #333; /* Dark grey for the heading for better visibility */
+    padding-left: 20px; /* Padding to move the title from the extreme left */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margins */
+}
+
+.intro-container {
+    display: flex; /* Using flexbox for layout */
+    flex-direction: column; /* Stacking items vertically on small screens */
+    align-items: center; /* Align items to the center in the cross-axis */
+}
+
+#Intro-text {
+    text-align: justify; /* Ensure text is justified */
+    margin: 20px 0; /* Margin top and bottom for spacing */
+    max-width: 800px; /* Maximum width of the text to maintain readability */
+    padding: 0 20px; /* Padding on both sides */
+}
+
+.slider-container {
+    position: relative;
+    max-width: 300px; /* Maximum width of the slider */
+    margin: auto;
+}
+
+.image-slider img {
+    width: 100%;
+    display: none; /* Hide images by default */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.image-slider img:hover {
+    transform: scale(1.1); /* Scale up the image by 10% on hover */
+}
+
+.image-slider img.active {
+    display: block; /* Show the active image */
+}
+
+/* Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* Centers the arrow vertically */
+    color: white; /* Makes the arrow white */
+    font-weight: bold;
+    font-size: 24px; /* Larger font size for better visibility */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /* Prevents text selection */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1000; /* Ensures arrows are above other content */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    transform: scale(1.1); /* Slightly enlarges the buttons when hovered */
+}
+
+/* Responsive Design Adjustments */
+@media (min-width: 768px) {
+    .intro-container {
+        flex-direction: row; /* Lay out items in a row on larger screens */
+        justify-content: space-around; /* Distribute space around items */
+        align-items: flex-start; /* Align items to the start in the cross-axis */
+    }
+
+    #Intro-text {
+        text-align: justify; /* Align text to the left on larger screens */
+        margin-right: 20px; /* Adding right margin for spacing between text and image */
     }
 }
 
@@ -254,26 +292,28 @@ a:hover {
     position: absolute;
     left: 10px;
     bottom: 10px;
-    width: 100px; /* Fixed width for logos */
+    max-width: 25%; /* Adjusts width relative to the parent container */
     height: auto; /* Maintain aspect ratio */
     opacity: 0.6; /* Make the logo less prominent */
     transition: opacity 0.3s ease;
 }
 
-
 .company-logo:hover {
     opacity: 1; /* Full visibility on hover */
 }
 
-@media (max-width: 768px) {
-    .certifications-container {
-        grid-template-columns: 1fr;
-    }
-    .certificate {
-        height: auto; /* More flexible on smaller screens */
+
+@media (min-width: 768px) {
+    .company-logo {
+        max-width: 30%; /* Slightly larger on wider screens */
     }
 }
 
+@media (min-width: 1024px) {
+    .company-logo {
+        max-width: 20%; /* Optimal size on large screens to avoid looking too big */
+    }
+}
 .certificate-link {
     text-decoration: none;
     color: inherit; /* Ensures that text color isn't affected by default link styles */
@@ -282,4 +322,58 @@ a:hover {
 .certificate-link:hover .certificate {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Research and Projects Section Styles */
+#Research, #Projects {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: left; /* Align text to the left */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1); /* Subtle inner shadow for depth */
+}
+
+.research-container, .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+/* Adjust the margin for individual cards within Research and Projects */
+.research-card, .project-card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px; /* Add bottom margin to each card */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for a lifted card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Additional spacing between Research and Projects sections */
+#Projects {
+    margin-top: 40px; /* Extra space above the Projects section */
+}
+
+.research-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for a lifted card effect */
+}
+
+.research-card h3, .project-card h3 {
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.research-card p, .project-card p {
+    margin: 0;
+}
+
+/* Main Content Styles */
+.main-content {
+    /*background: #f9f9f9; /* Lighter than body for contrast */
+    margin: 0; /* Adjust as needed */
+    padding-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for a lifted card effect */
 }

@@ -13,6 +13,7 @@
         <!-- <img src="Profile pic.jpg" alt="Your Photo" id="profile-pic"> -->
         <nav>
             <ul>
+                <li><a href="index.html" class="active">Homepage</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="interests.html">Interests & Goals</a></li>
                 <li><a href="personal.html">Personal Details</a></li>
@@ -24,16 +25,23 @@
     <section id="Introduction">
         <h2>Introduction</h2>
         <div class="intro-container">
-            <p id="Intro-text">
-                Hello, I'm Sakib Imtiaz, a dedicated and innovative Computer Science & Engineering graduate from Rajshahi, Bangladesh. Holding a Bachelor of Science degree in Computer Science and Engineering, I specialized in large language models during a transformative period for artificial intelligence, aligning my studies with cutting-edge technological trends.
-    
-                Throughout my academic career, I engaged deeply with machine learning and deep learning technologies, culminating in the solo design of a 32-bit processor in simulation—a project that honed my technical and problem-solving skills. My commitment extended beyond the classroom through active participation in coding festivals and community-oriented projects like environmental clean-ups, demonstrating my leadership and community spirit.
-                
-                Driven by a profound respect for education, inherited from my parents who are both teachers, my ultimate ambition is to become a professional researcher. My goal is to contribute meaningfully to the technological advancement of Bangladesh. I am known for my ability to manage time effectively, generate innovative ideas, and maintain unwavering dedication to my goals.
-                
-                As I embark on this professional journey, I am eager to apply my skills in a dynamic environment, aiming to make significant contributions to research that uplifts my community and country.
-            </p>
-            <img src="Picutures/Profile pic.jpg" alt="Sakib Imtiaz" class="intro-pic">
+            <div id="Intro-text">
+                <p>
+                    Hello, I'm Sakib Imtiaz, a dedicated and innovative Computer Science & Engineering graduate from Rajshahi, Bangladesh. Holding a Bachelor of Science degree in Computer Science and Engineering, I specialized in large language models during a transformative period for artificial intelligence, aligning my studies with cutting-edge technological trends.
+                    Throughout my academic career, I engaged deeply with machine learning and deep learning technologies, culminating in the solo design of a 32-bit processor in simulation—a project that honed my technical and problem-solving skills. My commitment extended beyond the classroom through active participation in coding festivals and community-oriented projects like environmental clean-ups, demonstrating my leadership and community spirit.
+                    Driven by a profound respect for education, inherited from my parents who are both teachers, my ultimate ambition is to become a professional researcher. My goal is to contribute meaningfully to the technological advancement of Bangladesh. I am known for my ability to manage time effectively, generate innovative ideas, and maintain unwavering dedication to my goals.
+                    As I embark on this professional journey, I am eager to apply my skills in a dynamic environment, aiming to make significant contributions to research that uplifts my community and country.
+                </p>
+            </div>
+            <div class="slider-container">
+                <a class="prev">&#10094;</a> <!-- Left arrow -->
+                <div class="image-slider">
+                    <img src="Pictures/Profile pic1.jpg" alt="Sakib Imtiaz" class="active" style="width:100%">
+                    <img src="Pictures/Profile pic2.jpg" alt="Sakib Imtiaz" style="width:100%">
+                    <img src="Pictures/Profile pic3.jpg" alt="Sakib Imtiaz" style="width:100%">
+                </div>
+                <a class="next">&#10095;</a> <!-- Right arrow -->
+            </div>
         </div>
     </section>
 
@@ -86,38 +94,38 @@
     <section id="Certifications">
         <h2>Certified Courses Taken</h2>
         <div class="certifications-container">
-            <a href="Picutures/Coursera Machine Learning for All.jpg" target="_blank" class="certificate-link">
+            <a href="Pictures/Coursera Machine Learning for All.jpg" target="_blank" class="certificate-link">
                 <div class="certificate">
                     <h3>Machine Learning for All</h3>
                     <p>University of London</p>
                     <p>Coursera</p>
-                    <img src="Picutures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
+                    <img src="Pictures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
                     <span class="icon">&#128279;</span>
                 </div>
             </a>
-            <a href="Picutures/Langchain.png" target="_blank" class="certificate-link">
+            <a href="Pictures/Langchain.png" target="_blank" class="certificate-link">
                 <div class="certificate">
                     <h3>LangChain Chat with Your Data</h3>
                     <p>DeepLearning.AI - Coursera</p>
-                    <img src="Picutures/dlai.png" alt="Deep Learning Logo" class="company-logo">
+                    <img src="Pictures/dlai.png" alt="Deep Learning Logo" class="company-logo">
                     <span class="icon">&#128279;</span>
                 </div>
             </a>
-            <a href="Picutures/Coursera bert.jpg" target="_blank" class="certificate-link">
+            <a href="Pictures/Coursera bert.jpg" target="_blank" class="certificate-link">
                 <div class="certificate">
                     <h3>Sentiment Analysis with Deep Learning using BERT</h3>
                     <p>Coursera Project Network</p>
                     <p>Coursera</p>
-                    <img src="Picutures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
+                    <img src="Pictures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
                     <span class="icon">&#128279;</span>
                 </div>
             </a>
-            <a href="Picutures/Coursera python basics.jpg" target="_blank" class="certificate-link">
+            <a href="Pictures/Coursera python basics.jpg" target="_blank" class="certificate-link">
                 <div class="certificate">
                     <h3>Python Basics</h3>
                     <p>University of Michigan</p>
                     <p>Coursera</p>
-                    <img src="Picutures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
+                    <img src="Pictures/Coursera_logo.png" alt="Coursera Logo" class="company-logo">
                     <span class="icon">&#128279;</span>
                 </div>
             </a>
@@ -149,15 +157,10 @@
         </div>
     </section>
     
-    
-    
-    
-    
-    
-
-
     <footer>
-        <p>&copy; 2024 Sakib Imtiaz. All rights reserved. Please contact me via sakibimtiaz1998@gmail.com</p>
+        <p>&copy; 2024 Sakib Imtiaz. All rights reserved. Please contact me via <a href="mailto:sakibimtiaz1998@gmail.com">sakibimtiaz1998@gmail.com</a></p>
     </footer>
+    
+    <script src="slider.js"></script>
 </body>
 </html>
