@@ -597,6 +597,30 @@ footer a:hover {
     background-color: #015F9F;
 }
 
+.personal-info, .contact-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 20px; /* Ensures spacing between cards */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Includes padding in width calculation */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    width: 300px; /* Set a fixed width */
+    min-height: 200px; /* Set a minimum height */
+}
+
+/* Optional: If the contents might overflow */
+.personal-info, .contact-info {
+    overflow: hidden; /* Or 'auto' if you want scrollbars when content overflows */
+}
+
+
+.personal-info h2, .contact-info h2 {
+    color: #0174DF;
+}
+
 @media (min-width: 768px) {
     .info-card, .personal-container {
         flex-direction: row;
@@ -611,3 +635,4 @@ footer a:hover {
         text-align: justify;
     }
 }
+
